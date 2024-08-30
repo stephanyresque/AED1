@@ -57,5 +57,12 @@ int main()
         printf("\n");
     }
 
+    for(int i = 0; i < linhas; i++)
+    {
+        free(matriz[i]);
+
+    }
+    free(matriz);
+
     return 0;
 }
