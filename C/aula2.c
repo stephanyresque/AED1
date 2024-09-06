@@ -106,6 +106,25 @@ int vet[3] = {1,2,3}; //vetores são ponteiros!
 
 */
 
+int main()
+{
+    char letra = 'a';
+    char *pt1 = &letra;
+    char **pt2 = &pt1;
+    char ***pt3 = &pt2;
 
+    printf("%c\n", *pt1);
+    printf("%c\n", **pt2);
+    printf("%c\n", ***pt3);
+    printf("--------------\n");
+    printf("%d\n", pt3);
+    printf("%d\n", *pt3);
+    printf("%d\n", **pt3);
+    printf("%c\n", ***pt3);
+
+
+
+    return 0;
+}
 
 
