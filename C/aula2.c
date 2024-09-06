@@ -9,10 +9,10 @@ typedef struct
     char nome[25];
 }Aluno;
 */
-
+/*
 int main()
 {
-/*
+
     Aluno *a;
 
     for(int i=0; i<2;i++)
@@ -82,6 +82,7 @@ int vet[3] = {1,2,3}; //vetores são ponteiros!
         printf("Memoria alocada com sucesso");
     }
 */
+/*
     int *vet, tam;
 
     printf("Qual tamanho do vetor: ");
@@ -103,6 +104,7 @@ int vet[3] = {1,2,3}; //vetores são ponteiros!
     return 0;
 }
 
+*/
 
 
 
