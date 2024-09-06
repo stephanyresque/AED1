@@ -56,13 +56,50 @@ int main()
 
 //pt[i] = *(pt+i)
 */
-
+/*
 int vet[3] = {1,2,3}; //vetores são ponteiros!
 
     for(int i=0;i<3;i++)
     {
         printf("numero: %d\n", *(vet+i));
     }
+*/
+//    int i;
+//    printf("%d", sizeof(i));
+
+//sizeof, calloc, malloc, realloc e free
+/*
+    int *pt;
+
+    pt = calloc(4, sizeof(int));
+
+    if(pt == NULL)
+    {
+        printf("Erro de alocacao de memoria");
+        exit(1);
+    }else
+    {
+        printf("Memoria alocada com sucesso");
+    }
+*/
+    int *vet, tam;
+
+    printf("Qual tamanho do vetor: ");
+    scanf("%d", &tam);
+
+    vet = calloc(tam, sizeof(int));
+
+    if(vet == NULL)
+    {
+        printf("Erro de alocacao de memoria");
+        exit(1);
+    }else
+    {
+        printf("Memoria alocada com sucesso");
+    }
+
+
+
     return 0;
 }
 
