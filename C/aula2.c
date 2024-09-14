@@ -57,7 +57,7 @@ int main()
 //pt[i] = *(pt+i)
 */
 /*
-int vet[3] = {1,2,3}; //vetores são ponteiros!
+int vet[3] = {1,2,3}; //vetores sï¿½o ponteiros!
 
     for(int i=0;i<3;i++)
     {
@@ -117,10 +117,6 @@ int main()
     printf("%c\n", **pt2);
     printf("%c\n", ***pt3);
     printf("--------------\n");
-    printf("%d\n", pt3);
-    printf("%d\n", *pt3);
-    printf("%d\n", **pt3);
-    printf("%c\n", ***pt3);
 
 
 
