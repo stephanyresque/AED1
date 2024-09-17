@@ -11,6 +11,8 @@ int main()
     area(meu_cubo);
     printf("\n");
     volume(meu_cubo);
+    printf("\n");
+    lados(meu_cubo);
 
     return 0;
 }

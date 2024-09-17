@@ -30,3 +30,8 @@ float volume(const Cubo *cubo_usuario){
     printf("O volume do seu cubo eh %.2f u.d.", cubo_usuario->volume);
     return cubo_usuario->volume;
 }
+
+float lados(const Cubo *cubo_usuario){
+    printf("Os lados do seu cubo tem medida de %.2f u.d.", cubo_usuario->lado);
+    return cubo_usuario->lado;
+}
