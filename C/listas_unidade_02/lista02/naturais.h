@@ -16,4 +16,7 @@ int menor(int x, Conjunto *nat);
 int pertenceConjunto(int x, Conjunto *nat);
 int conjuntosIdenticos(Conjunto *nat1,Conjunto *nat2);
 int subconjunto(Conjunto *nat1, Conjunto *nat2);
+void destruirConjunto(Conjunto **nat);
+
+void menu();
 

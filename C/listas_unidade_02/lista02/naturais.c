@@ -251,6 +251,19 @@ int subconjunto(Conjunto *nat1, Conjunto *nat2){
     }
 }
 
+void destruirConjunto(Conjunto **nat){
+    if(*nat == NULL){
+        printf("Conjunto nao existe.\n");
+        
+    }else{
+        free((*nat)->numeros);
+        free(*nat);
+        *nat = NULL; 
+        printf("Conjunto destruido.\n");
+           
+    }
+}
+
 
 
 
