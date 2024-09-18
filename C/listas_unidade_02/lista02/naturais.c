@@ -14,6 +14,7 @@ Conjunto* criaConjunto(){
     nat = (Conjunto*)calloc(1,sizeof(Conjunto));
 
     if(nat==NULL){
+        printf("Erro ao criar conjunto.\n");
         return NULL;
     }else{
         nat->numeros = NULL;
@@ -24,9 +25,16 @@ Conjunto* criaConjunto(){
 }
 
 int conjuntoVazio(Conjunto *nat){
+
+    if(nat == NULL){
+        printf("O conjunto nao foi criado ainda.\n");
+        return FALSE;
+    }
     if(nat->cardinalidade == 0){
+        printf("Conjunto vazio.\n");
         return TRUE;
     }else{
+        printf("Conjunto nao vazio.\n");
         return FALSE;
     }
 }
@@ -34,11 +42,13 @@ int conjuntoVazio(Conjunto *nat){
 int insereElementoConjunto(int x, Conjunto *nat){
 
     if(nat == NULL){
+        printf("O conjunto nao foi criado ainda.\n");
         return FALHA;
     }
 
     for(int i = 0; i < nat->cardinalidade; i++){
         if(nat->numeros[i] == x){
+            printf("Elemento ja existe.\n");
             return FALHA;
         }
     }
@@ -52,20 +62,26 @@ int insereElementoConjunto(int x, Conjunto *nat){
             novaCapacidade = 2 * nat->capacidade;
         }
 
-        int *novosNumeros = (int*)realloc(nat->numeros, novaCapacidade * sizeof(int));
+        int *novosNumeros;
+
+        novosNumeros = (int*)realloc(nat->numeros, novaCapacidade * sizeof(int));
+
         if(novosNumeros == NULL){
+            printf("Erro ao realocar o conjunto.\n");
             return FALHA;
         }
         nat->numeros = novosNumeros;
         nat->capacidade = novaCapacidade;
     }
 
-    nat->numeros[nat->capacidade++] = x;
+    nat->numeros[nat->cardinalidade++] = x;
+    printf("Elemento adicionado com sucesso.\n");
     return SUCESSO;
 }
 
 int excluirElementoConjunto(int x, Conjunto *nat){
     if(nat == NULL){
+        printf("O conjunto nao foi criado ainda.\n");
         return FALHA;
     }
 
@@ -79,6 +95,7 @@ int excluirElementoConjunto(int x, Conjunto *nat){
     }
 
     if(indice == -1){
+        printf("O elemento nao existe.\n");
         return FALHA;
     }
 
@@ -88,14 +105,26 @@ int excluirElementoConjunto(int x, Conjunto *nat){
 
     nat->cardinalidade--;
 
+    printf("Elemento excluido com sucesso.\n");
     return SUCESSO;
 }
 
 int tamanhoConjunto(Conjunto *nat){
+
+    if(nat == NULL){
+        printf("O conjunto nao foi criado ainda.\n");
+        return FALHA;
+    }
+    printf("Tamanho do conjunto/cardinalidade: %d\n", nat->cardinalidade);
     return nat->cardinalidade;
 }
 
 int maior(int x, Conjunto *nat){
+
+    if(nat == NULL){
+        printf("O conjunto nao foi criado ainda.\n");
+        return FALHA;
+    }
 
     if(nat->cardinalidade == 0){
         printf("Conjunto vazio.\n");
@@ -113,11 +142,17 @@ int maior(int x, Conjunto *nat){
         printf("Todos os elementos do conjunto sao maiores que x.\n");
         return 0;
     }else{
+        printf("Maiores que %d: %d\n", x, total);
         return total;
     }
 }
 
 int menor(int x, Conjunto *nat){
+
+    if(nat == NULL){
+        printf("O conjunto nao foi criado ainda.\n");
+        return FALHA;
+    }
 
     if(nat->cardinalidade == 0){
         printf("Conjunto vazio.\n");
@@ -136,6 +171,7 @@ int menor(int x, Conjunto *nat){
         printf("Todos os elementos do conjunto sao menores que x.\n");
         return 0;
     }else{
+        printf("Menores que %d: %d\n", x, total);
         return total;
     }
 
@@ -143,18 +179,31 @@ int menor(int x, Conjunto *nat){
 
 int pertenceConjunto(int x, Conjunto *nat){
 
+    if(nat == NULL){
+        printf("O conjunto nao foi criado ainda.\n");
+        return FALHA;
+    }
+
     for(int i = 0; i < nat->cardinalidade; i++){
         if(nat->numeros[i] == x){
+            printf("%d pertence ao conjunto.\n", x);
             return TRUE;
         }
     }
-
+    printf("%d nao pertence ao conjunto.\n", x);
     return FALSE;
 }
 
 int conjuntosIdenticos(Conjunto *nat1,Conjunto *nat2){
 
+    if((nat1 == NULL) || (nat2 == NULL)){
+        printf("Um ou ambos os conjuntos nao foram criados ainda.\n");
+        return FALHA;
+    }
+
+
     if(nat1->cardinalidade != nat2->cardinalidade){
+        printf("Os conjuntos nao sao identicos.\n");
         return FALSE;
     }
     int verificador = 0;
@@ -168,13 +217,21 @@ int conjuntosIdenticos(Conjunto *nat1,Conjunto *nat2){
     }
 
     if(verificador == nat1->cardinalidade){
+        printf("Os conjuntos sao identicos.\n");
         return TRUE;
     }else{
+        printf("Os conjuntos nao sao identicos.\n");
         return FALSE;
     }
 }
 
 int subconjunto(Conjunto *nat1, Conjunto *nat2){
+
+    if((nat1 == NULL) || (nat2 == NULL)){
+        printf("Um ou ambos os conjuntos nao foram criados ainda.\n");
+        return FALHA;
+    }
+
     int verificador = 0;
 
     for(int i = 0; i <nat2->cardinalidade; i++){
@@ -186,8 +243,10 @@ int subconjunto(Conjunto *nat1, Conjunto *nat2){
     }
 
     if(verificador == nat1->cardinalidade){
+        printf("C1 eh um subconjunto de C2.\n");
         return TRUE;
     }else{
+        printf("C1 nao eh um subconjunto de C2.\n");
         return FALSE;
     }
 }
