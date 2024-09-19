@@ -18,5 +18,5 @@ int conjuntosIdenticos(Conjunto *nat1,Conjunto *nat2);
 int subconjunto(Conjunto *nat1, Conjunto *nat2);
 void destruirConjunto(Conjunto **nat);
 
-void menu();
+// void menu();
 

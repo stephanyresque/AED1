@@ -264,6 +264,81 @@ void destruirConjunto(Conjunto **nat){
     }
 }
 
+// void menu(){
 
+//     while(1==1){
+//         int resp;
+
+//         printf("CONJUNTO DOS NATURAIS\n");
+//         printf("---------------------------------\n");
+//         printf("[1] Criar um conjunto vazio.\n");
+//         printf("[2] Verificar se o conjunto eh vazio.\n");
+//         printf("[3] Inserir elementos.\n");
+//         printf("[4] Excluir elementos do conjunto.\n");
+//         printf("[5] Cardinalidade do conjunto.\n");
+//         printf("[6] Verificar se x eh maior.\n");
+//         printf("[7] Verificar se x eh menor.\n");
+//         printf("[8] Verificar se x pertence ao conjunto.\n");
+//         printf("[9] Verificar se os conjuntos sao iguais.\n");
+//         printf("[10] Verificar se C1 eh subconjunto de C2.\n");
+//         printf("[11] Destruir conjunto.\n");
+//         printf("[0] Sair.\n");
+
+
+//         printf("Selecione: ");
+//         scanf("%d", &resp);
+
+//         switch (resp)
+//         {
+//         case 1:
+//             Conjunto *nat;
+//             nat = criaConjunto();
+//             break;
+//         case 2:
+//             conjuntoVazio(nat);
+//             break;
+//         case 3:
+//             int x;
+//             printf("Informe o elemento a ser inserido: \n");
+//             scanf("%d", &x);
+//             insereElementoConjunto(x, nat);
+//             break;
+//         case 4:
+//             int y;
+//             printf("Informe o elemento a ser excluido: \n");
+//             scanf("%d", &y);
+//             excluirElementoConjunto(y, nat);
+//             break;
+//         case 5:
+//             tamanhoConjunto(nat);
+//             break;
+//         case 6:
+//             int z;
+//             printf("Informe o elemento: \n");
+//             scanf("%d", &z);
+//             maior(z, nat);
+//             break;
+//         case 7:
+//             int w;
+//             printf("Informe o elemento: \n");
+//             scanf("%d", &w);
+//             menor(w, nat);
+//             break;
+//         case 8:
+//             int t;
+//             printf("Informe o elemento: \n");
+//             scanf("%d", &t);
+//             pertenceConjunto(t, nat);
+//             break;
+//         case 11:
+//             destruirConjunto(&nat);
+        
+//         }
+
+//         if(resp == 0){
+//             break;
+//         }
+//     }
+// }
 
 
