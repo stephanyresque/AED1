@@ -124,11 +124,15 @@ int main(){
             break;
 
             case 13:
-            if(nat1 != NULL && nat2 != NULL){
+            if(nat1 != NULL){
                 destruirConjunto(&nat1);
+            }else{
+                printf("Conjunto 1 nao existe!\n");
+            }
+            if(nat2 != NULL){
                 destruirConjunto(&nat2);
             }else{
-                printf("Ambos os conjuntos precisam ser criados primeiro!\n");
+                printf("Conjunto 2 nao existe!\n");
             }
             break;
 
@@ -158,7 +162,7 @@ void exibeMenu() {
     printf("\n--- Menu ---\n");
     printf("1. Criar conjunto 1\n");
     printf("2. Criar conjunto 2\n");
-    printf("3. Verificar se o conjunto 1 está vazio\n");
+    printf("3. Verificar se o conjunto 1 esta vazio\n");
     printf("4. Inserir elemento no conjunto 1\n");
     printf("5. Inserir elemento no conjunto 2\n");
     printf("6. Excluir elemento do conjunto 1\n");

@@ -139,7 +139,7 @@ int maior(int x, Conjunto *nat){
     }
 
     if(total == nat->cardinalidade){
-        printf("Todos os elementos do conjunto sao maiores que x.\n");
+        printf("Todos os elementos do conjunto sao maiores que %d.\n", x);
         return 0;
     }else{
         printf("Maiores que %d: %d\n", x, total);
@@ -168,7 +168,7 @@ int menor(int x, Conjunto *nat){
     }
 
     if(total == nat->cardinalidade){
-        printf("Todos os elementos do conjunto sao menores que x.\n");
+        printf("Todos os elementos do conjunto sao menores que %d.\n", x);
         return 0;
     }else{
         printf("Menores que %d: %d\n", x, total);
