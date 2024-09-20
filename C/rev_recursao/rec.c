@@ -14,12 +14,19 @@ int somatorio(int vet[], int n){
 
 int naturais(int tam){
     
-    // if( tam == 1){
-        
-    // }
+    if(tam <= 0){
+        return 0;
+    }
+
     
-    
+    naturais(tam - 1);
+    printf("%d ", tam);
 }
+
+// int fibonatti(int n){
+
+//     return ()
+// }
 
 int main(){
 
@@ -29,9 +36,9 @@ int main(){
     // r = somatorio(vet, 5);
     // printf("%d", r);
 
-    int tam = 5;
+    // int tam = 37;
 
-    naturais(tam);
+    // naturais(tam);
 
     return 0;
 }
