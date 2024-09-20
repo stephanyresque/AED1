@@ -14,13 +14,9 @@ int somatorio(int vet[], int n){
 
 int naturais(int tam){
     
-    if(tam <= 0 ){
-        return 0;
-
-    }
-
-    printf("%d ", tam);
-    return (tam - 1);
+    // if( tam == 1){
+        
+    // }
     
     
 }
