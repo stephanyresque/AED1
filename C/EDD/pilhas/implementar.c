@@ -27,7 +27,7 @@ void imprimir_pessoa(Pessoa p){
     printf("\nNome: %s\nData: %2d/%2d/%4d", p.nome, p.data.dia, p.data.mes, p.data.ano);
 };
 
-// função push (empilhar):
+
 No* push(No *topo){
     No *novo = malloc(sizeof(No));
     
@@ -37,16 +37,36 @@ No* push(No *topo){
     }else{
         novo->p = cria_pessoa();
         novo->proximo = topo;
-        // Como isso funciona? O campo "proximo" do novo nó vai apontar para o antigo topo da pilha. Isso garante que o novo nó se torne o topo e o antigo topo fique logo abaixo dele na pilha.
-        // Se a pilha estava vazia (ou seja, topo era NULL), o campo proximo do novo nó também será NULL, indicando que este é o único elemento na pilha.
         return novo;
     }
 };
 
+No* pop(No **topo){ 
+    if(*topo != NULL){
+        No *remover = *topo;
+        *topo = remover->proximo;
+       
+        return remover;
+    }else{
+        printf("\nPilha vazia\n");
+        return NULL;
+    }
+    
+};
+
+void imprimir_pilha(No *topo){
+    printf("\n-------- PILHA --------\n");
+    while(topo){
+        imprimir_pessoa(topo->p);
+        topo = topo->proximo;
+    }
+    printf("\n-------- FIM PILHA --------\n");
+}
 
 
 int main(){
 
+    No *remover;
     No *topo = NULL;
     int opcao;
 
@@ -61,10 +81,17 @@ int main(){
             topo = push(topo);
             break;
         case 2:
+            remover = pop(&topo);
 
+            if(remover != NULL){
+                printf("\nElemento removido com sucesso!\n");
+                imprimir_pessoa(remover->p);
+            }else{
+                printf("\nSem no a remover...\n");
+            }
             break;
         case 3:
-
+            imprimir_pilha(topo);
             break;
         default:
             if(opcao != 0)
@@ -77,11 +104,3 @@ int main(){
 
     return 0;
 }
-// Antes de Maria ser empilhada, a pilha está assim:
-// Pilha (vazia)
-
-// Depois de Maria ser empilhada:
-// Topo -> [Maria, 01/01/1990] -> NULL
-
-// Agora, se você empilhar outra pessoa (por exemplo, "João" nascido em 02/02/1992):
-// Topo -> [João, 02/02/1992] -> [Maria, 01/01/1990] -> NULL
