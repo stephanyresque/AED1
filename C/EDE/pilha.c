@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "pilha.h"
 
 struct pilha{
@@ -82,7 +83,7 @@ int consulta_topo_pilha(Pilha *pilhinha, Aluno *aluno){ //passagem por referênc
     return 1;
 }
 
-int inserir_elemento(Pilha *pilhinha, Aluno aluno){ //passagem por valor! 
+int push(Pilha *pilhinha, Aluno aluno){ //passagem por valor! 
 
     if(pilhinha == NULL || pilhinha->qtd==TAMANHO_MAXIMO){
         
@@ -96,7 +97,7 @@ int inserir_elemento(Pilha *pilhinha, Aluno aluno){ //passagem por valor!
 
 }
 
-int remove_elemento(Pilha *pilhinha){
+int pop(Pilha *pilhinha){
 
     if(pilhinha == NULL || pilhinha->qtd== 0){
         
@@ -105,6 +106,26 @@ int remove_elemento(Pilha *pilhinha){
     
     pilhinha->qtd--;
     return 1;
+}
+
+void imprime_pilha(Pilha *pilhinha){
+
+    if(pilhinha == NULL || pilhinha->qtd == 0){
+        
+        printf("Pilha nao criada ou vazia..\n");
+        exit(1);
+    }
+
+    int i;
+
+    printf("------ DADOS PILHA ------\n");
+    for(i=0;i<pilhinha->qtd;i++){
+        printf("Dado %d:\n", i);
+        printf("Nome: %s", pilhinha->dados[i].nome);
+        printf("Matricula: %d\n", pilhinha->dados[i].matricula);
+        printf("Media do aluno: %.2f\n", pilhinha->dados[i].media);
+        printf("\n");
+    }
 }
 
 
