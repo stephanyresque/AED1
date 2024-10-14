@@ -47,29 +47,88 @@ int tamanho_fila(Fila *filha){
 
 int fila_cheia(Fila *filha){
 
-    if(filha == NULL || filha->tamanho != MAX){
+    if(filha == NULL){
 
         return 0;
     }
+    if(filha->tamanho == MAX){
+        
+        return 1;
+    }
 
-    return 1;
+    return 0;
 }
 
 
 int fila_vazia(Fila *filha){
 
-    if(filha == NULL || filha->tamanho != 0){
+    if(filha == NULL){
 
         return 0;
     }
+
+    if(filha->tamanho == 0){
+
+        return 1;
+    }
+
+    return 0;
+}
+
+int inserir_fila(Fila *filha, Numero number){
+
+    if(filha == NULL || filha->tamanho == MAX){
+
+        return 0;
+    }
+
+    filha->number[filha->tamanho] = number;
+    filha->tamanho++;
+    return 1;
+}
+
+int remove_fila(Fila *filha){
+
+    if(filha == NULL || filha->tamanho == 0){
+
+        return 0;
+    }
+
+    int i;
+    for(i=0; i < filha->tamanho - 1; i ++){
+        filha->number[i] = filha->number[i+1];
+    }
+
+    filha->tamanho--;
+    return 1;
+}
+
+int consulta_primeiro_fila(Fila *filha, Numero *number){
+
+    if(filha == NULL || filha->tamanho == 0){
+
+        return 0;
+    }
+
+    *number = filha->number[0];
 
     return 1;
 }
 
-int inserir_fila(Fila *filha){
+void imprimir_fila(Fila *filha){
+    if(filha == NULL || filha->tamanho == 0){
 
-    if(filha == NULL || filha->tamanho != 0){
+        printf("Fila nao exite.\n");
+        exit(1);
+    }
 
-        return 0;
+    int i;
+    for(i=0; i < filha->tamanho; i++){
+        printf("Elemento %d;\n", i);
+        printf("Chave: %d\n", filha->number[i].chave);
+        printf("Numero: %d\n", filha->number[i].valor);
     }
 }
+
+
+
