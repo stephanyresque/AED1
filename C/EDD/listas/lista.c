@@ -251,6 +251,11 @@ int lista_vazia(Lista* li){
 }
 
 int lista_cheia(Lista* li){
+    Elem *no = (Elem*)malloc(sizeof(Elem));
+    if(no == NULL){
+        return 1;
+    }
+
     return 0;
 }
 
