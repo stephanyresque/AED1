@@ -114,6 +114,11 @@ int Fila_vazia(Fila* fi){
 }
 
 int Fila_cheia(Fila* fi){
+    Elem *no = (Elem*)malloc(sizeof(Elem));
+    if(no == NULL){
+        return 1;
+    }
+
     return 0;
 }
 
