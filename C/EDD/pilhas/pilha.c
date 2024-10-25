@@ -93,6 +93,10 @@ int tamanho_Pilha(Pilha* pi){
 }
 
 int Pilha_cheia(Pilha* pi){
+    Elem *no = (Elem*)malloc(sizeof(Elem));
+    if(no == NULL){
+        return 1;
+    }
     return 0;
 }
 
