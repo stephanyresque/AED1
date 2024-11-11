@@ -1,25 +1,16 @@
-//Arquivo ListaSequencial.h
-#define MAX 100
-struct aluno{
-    int matricula;
-    char nome[30];
-    float n1,n2,n3;
-};
+#define MAX 100  
 
-typedef struct lista Lista;
-Lista* cria_lista();
-void libera_lista(Lista* li);
-int consulta_lista_pos(Lista* li, int pos, struct aluno *al);
-int consulta_lista_mat(Lista* li, int mat, struct aluno *al);
-int insere_lista_final(Lista* li, struct aluno al);
-int insere_lista_inicio(Lista* li, struct aluno al);
-int insere_lista_ordenada(Lista* li, struct aluno al);
-int remove_lista(Lista* li, int mat);
-int remove_lista_inicio(Lista* li);
-int remove_lista_final(Lista* li);
-int tamanho_lista(Lista* li);
-int lista_cheia(Lista* li);
-int lista_vazia(Lista* li);
-void imprime_lista(Lista* li);
+typedef struct {
+    int dados[MAX]; 
+    int tamanho;     
+} ListaEstatica;
 
-int remove_lista_otimizado(Lista* li, int mat);
+ListaEstatica* inicializar_lista();
+int lista_vazia(ListaEstatica *lista);
+int lista_cheia(ListaEstatica *lista);
+int inserir_n_final(ListaEstatica *lista, int valores[], int n);
+int inserir_n_inicio(ListaEstatica *lista, int valores[], int n);
+int remover_final(ListaEstatica *lista);
+int acessar_n_elementos(ListaEstatica *lista, int posicoes[], int n, int valores[]);
+
+
