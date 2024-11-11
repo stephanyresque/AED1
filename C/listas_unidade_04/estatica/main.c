@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "ListaSequencial.h"
 
 int main() {
@@ -18,15 +19,15 @@ int main() {
 
     int valores_inicio[] = {5, 15};
     if (inserir_n_inicio(lista, valores_inicio, 2) == 0) {
-        printf("Inseridos 2 elementos no início: 5, 15\n");
+        printf("Inseridos 2 elementos no inicio: 5, 15\n");
     } else {
-        printf("Falha ao inserir elementos no início.\n");
+        printf("Falha ao inserir elementos no inicio.\n");
     }
 
     int posicoes_consulta[] = {0, 2, 4};  
     int valores_consulta[3];
     if (acessar_n_elementos(lista, posicoes_consulta, 3, valores_consulta) == 0) {
-        printf("Valores nas posições 0, 2 e 4: ");
+        printf("Valores nas posicoes 0, 2 e 4: ");
         for (int i = 0; i < 3; i++) {
             printf("%d ", valores_consulta[i]);
         }
