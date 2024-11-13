@@ -1,4 +1,4 @@
-#define MAX 500000000
+#define MAX 500000
 
 typedef struct lista Lista;
 
