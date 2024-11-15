@@ -1,30 +1,30 @@
+
+Estatísticas de tempo para inserção de elementos no início da lista sequencial:
 N = 100, Tempo = 0 ms
 N = 500, Tempo = 0 ms
-N = 1000, Tempo = 1 ms
-N = 5000, Tempo = 20 ms
-N = 10000, Tempo = 62 ms
-N = 50000, Tempo = 1624 ms
-N = 100000, Tempo = 5927 ms
-N = 500000, Tempo = 154565 ms
+N = 1000, Tempo = 2 ms
+N = 5000, Tempo = 8 ms
+N = 10000, Tempo = 29 ms
+N = 50000, Tempo = 827 ms
+N = 100000, Tempo = 3025 ms
+N = 500000, Tempo = 84878 ms
 
-Estatísticas de tempo para consulta de elementos aleatórios (1.000.000 consultas):
-N = 100, Tempo total = 20 ms, Tempo médio por consulta = 0 µs
-N = 500, Tempo total = 21 ms, Tempo médio por consulta = 0 µs
-N = 1000, Tempo total = 23 ms, Tempo médio por consulta = 0 µs
-N = 5000, Tempo total = 24 ms, Tempo médio por consulta = 0 µs
-N = 10000, Tempo total = 24 ms, Tempo médio por consulta = 0 µs
-N = 50000, Tempo total = 27 ms, Tempo médio por consulta = 0 µs
-N = 100000, Tempo total = 30 ms, Tempo médio por consulta = 0 µs
-N = 500000, Tempo total = 29 ms, Tempo médio por consulta = 0 µs
+Estatísticas de tempo para inserção de elementos no final da lista sequencial (100.000 inserções):
+N = 100, Tempo total = 17 ms, Tempo médio por inserção no final = 0 µs
+N = 500, Tempo total = 76 ms, Tempo médio por inserção no final = 0 µs
+N = 1000, Tempo total = 178 ms, Tempo médio por inserção no final = 0 µs
+N = 5000, Tempo total = 1166 ms, Tempo médio por inserção no final = 0 µs
+N = 10000, Tempo total = 2445 ms, Tempo médio por inserção no final = 0 µs
+N = 50000, Tempo total = 10960 ms, Tempo médio por inserção no final = 0 µs
+N = 100000, Tempo total = 21056 ms, Tempo médio por inserção no final = 0 µs
+N = 500000, Tempo total = 105782 ms, Tempo médio por inserção no final = 1 µs
 
-
-
-Estatísticas de tempo para inserção de elementos no final da lista (100.000 inserções):
-N = 100, Tempo total = 39 ms, Tempo médio por inserção = 0 µs
-N = 500, Tempo total = 188 ms, Tempo médio por inserção = 0 µs
-N = 1000, Tempo total = 335 ms, Tempo médio por inserção = 0 µs
-N = 5000, Tempo total = 2346 ms, Tempo médio por inserção = 0 µs
-N = 10000, Tempo total = 4702 ms, Tempo médio por inserção = 0 µs
-N = 50000, Tempo total = 20383 ms, Tempo médio por inserção = 0 µs
-N = 100000, Tempo total = 55146 ms, Tempo médio por inserção = 0 µs
-N = 500000, Tempo total = 287338 ms, Tempo médio por inserção = 2 µs
+Estatísticas de tempo para consulta de elementos aleatórios na lista sequencial (1.000.000 consultas):
+N = 100, Tempo total = 3 ms, Tempo médio por consulta = 0 µs
+N = 500, Tempo total = 3 ms, Tempo médio por consulta = 0 µs
+N = 1000, Tempo total = 4 ms, Tempo médio por consulta = 0 µs
+N = 5000, Tempo total = 6 ms, Tempo médio por consulta = 0 µs
+N = 10000, Tempo total = 4 ms, Tempo médio por consulta = 0 µs
+N = 50000, Tempo total = 5 ms, Tempo médio por consulta = 0 µs
+N = 100000, Tempo total = 7 ms, Tempo médio por consulta = 0 µs
+N = 500000, Tempo total = 7 ms, Tempo médio por consulta = 0 µs
