@@ -1,30 +1,30 @@
 Estatísticas de tempo para inserção de elementos no início da lista encadeada (1.000 inserções):
-N = 100, Tempo total = 7 ms, Tempo médio por inserção no início = 0 µs
-N = 500, Tempo total = 26 ms, Tempo médio por inserção no início = 0 µs
-N = 1000, Tempo total = 34 ms, Tempo médio por inserção no início = 0 µs
-N = 5000, Tempo total = 158 ms, Tempo médio por inserção no início = 0 µs
-N = 10000, Tempo total = 275 ms, Tempo médio por inserção no início = 0 µs
-N = 50000, Tempo total = 1279 ms, Tempo médio por inserção no início = 1 µs
-N = 100000, Tempo total = 2605 ms, Tempo médio por inserção no início = 2 µs
-N = 500000, Tempo total = 13015 ms, Tempo médio por inserção no início = 13 µs
+N = 100, Tempo total = 7 ms
+N = 500, Tempo total = 26 ms
+N = 1000, Tempo total = 34 ms
+N = 5000, Tempo total = 158 ms
+N = 10000, Tempo total = 275 ms
+N = 50000, Tempo total = 1279 ms
+N = 100000, Tempo total = 2605 ms
+N = 500000, Tempo total = 13015 ms
 
 Estatísticas de tempo para inserção de elementos no final da lista encadeada:
-N = 100, Tempo total = 0 ms, Tempo médio por inserção no final = 0 µs
-N = 500, Tempo total = 1 ms, Tempo médio por inserção no final = 1 µs
-N = 1000, Tempo total = 2 ms, Tempo médio por inserção no final = 2 µs
-N = 5000, Tempo total = 23 ms, Tempo médio por inserção no final = 23 µs
-N = 10000, Tempo total = 95 ms, Tempo médio por inserção no final = 95 µs
-N = 50000, Tempo total = 2350 ms, Tempo médio por inserção no final = 2350 µs
-N = 100000, Tempo total = 9619 ms, Tempo médio por inserção no final = 9619 µs
-N = 500000, Tempo total = 284946 ms, Tempo médio por inserção no final = 284946 µs
+N = 100, Tempo total = 0 ms
+N = 500, Tempo total = 1 ms
+N = 1000, Tempo total = 2 ms
+N = 5000, Tempo total = 23 ms
+N = 10000, Tempo total = 95 ms
+N = 50000, Tempo total = 2350 ms
+N = 100000, Tempo total = 9619 ms
+N = 500000, Tempo total = 284946 ms
 
 Estatísticas de tempo para consulta de elementos aleatórios na lista encadeada (1.000 consultas):
-N = 100, Tempo total = 2 ms, Tempo médio por consulta = 0 µs
-N = 500, Tempo total = 1 ms, Tempo médio por consulta = 0 µs
-N = 1000, Tempo total = 2 ms, Tempo médio por consulta = 0 µs
-N = 5000, Tempo total = 4 ms, Tempo médio por consulta = 0 µs
-N = 10000, Tempo total = 7 ms, Tempo médio por consulta = 0 µs
-N = 50000, Tempo total = 29 ms, Tempo médio por consulta = 0 µs
-N = 100000, Tempo total = 29 ms, Tempo médio por consulta = 0 µs
-N = 500000, Tempo total = 46 ms, Tempo médio por consulta = 0 µs
+N = 100, Tempo total = 2 ms
+N = 500, Tempo total = 1 ms
+N = 1000, Tempo total = 2 ms
+N = 5000, Tempo total = 4 ms
+N = 10000, Tempo total = 7 ms
+N = 50000, Tempo total = 29 ms
+N = 100000, Tempo total = 29 ms
+N = 500000, Tempo total = 46 ms
 
